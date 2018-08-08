@@ -1,0 +1,36 @@
+server.port: 9500
+heatmaps:
+  heatmap:
+    -
+      lat: 51.51502
+      lng: -0.204556
+      heat: red
+    -
+      lat: 51.7525
+      lng: -1.28111111111
+      heat: red
+    -
+      lat: 51.6549722222
+      lng: -0.774027777778
+      heat: red
+    -
+      lat: 51.3594166667
+      lng: -1.14736111111
+      heat: red
+    -
+      lat: 51.4879444444
+      lng: 0.317944444444
+      heat: red
+    -
+      lat: 51.3015
+      lng: 0.880694444444
+      heat: red
+    -
+      lat: 51.1816666667
+      lng: -0.127027777778
+      heat: red
+    -
+      lat: 51.2638333333
+      lng: -0.566277777778
+      heat: red
+
