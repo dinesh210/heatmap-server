@@ -1,5 +1,6 @@
 package com.predina.heatmap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -7,11 +8,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@ConfigurationProperties(prefix = "heatmaps")
+//@ConfigurationProperties(prefix = "heatmaps")
 public class HeatMapService {
+    @Autowired
+    CoordianteRepository coordianteRepository;
     private  List<HeatMap> heatmap = new ArrayList<>();
-    public HeatMapService() {
-
+    public HeatMapService(@Autowired
+                                  CoordianteRepository coordianteRepository) {
+        this.coordianteRepository = coordianteRepository;
+        this.coordianteRepository.findAll().forEach(e -> {
+            HeatMap heatMap = new HeatMap();
+            heatMap.setHeat("green");
+            heatMap.setLat(e.getLat());
+            heatMap.setLng(e.getLng());
+            heatmap.add(heatMap);
+        });
     }
 
     public static String getHeatRandom() {

@@ -3,7 +3,6 @@ package com.predina.heatmap;
 import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.constraints.Null;
 
 @Entity
 @Table(name="vehicleinfo")

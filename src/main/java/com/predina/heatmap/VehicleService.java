@@ -32,7 +32,6 @@ public class VehicleService {
         query.append(hourStg);
         query.append(":");
         query.append(minStg);
-        System.out.println("yudinesh" + query.toString());
         vehicles = vehicleInofRepository.findByHs(query.toString());
     }
 
